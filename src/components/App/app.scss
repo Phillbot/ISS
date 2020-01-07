@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+html,
+body {
+  height: 100%;
+  overflow: auto;
+  font-family: "Lato", sans-serif !important;
+}
+
+.table-container-scroll {
+  max-width: 100%;
+  overflow: auto;
+  margin: 1.5rem auto;
+}
+
+.text-link {
+  color: black;
+  &:hover {
+    opacity: 0.95;
+  }
+}
+
+.table-link {
+  color: black;
+  text-decoration: underline;
+  &:hover {
+    opacity: 0.95;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+table {
+  font-size: 0.8rem;
+  tr,
+  td {
+    padding: 3px 5px !important;
+  }
+
+  th {
+    background: #26a69a;
+    color: white;
+  }
+}
+
+.no-bg-thead {
+  th {
+    background: none;
+    color: white;
+  }
+}
+
+.table-border {
+  tr,
+  td,
+  th {
+    border: 1px solid lightgrey;
+  }
+}
+
+.container-fluid {
+  width: 95%;
+  margin: 0 auto;
+  max-width: initial;
+  > .row {
+    margin: 0 auto;
+    > .col {
+      padding: 1rem;
+    }
+  }
+}
