@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import testReducer from "./testReducer";
+import getFetchData from "./getFetchDataReducer";
 
 const rootReducer = combineReducers({
-  testReducer
+  getFetchData
 });
 
 export default rootReducer;
