@@ -1,44 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Тестовое задание
 
-## Available Scripts
+Международная Космическая Станция (МКС) мчится по земной орбите со скоростью 27700 км/ч - за сутки она успевает облететь Землю почти 16 раз! Программа станции обеспечивает непрерывное присутствие человека в космосе с момента запуска первой экспедиции 31 октября 2000 года, и за это время её посетило более 200 человек из восьми стран. 
+Вам предлагается создать веб-приложение, отображающее в реальном времени текущее местоположение МКС, а также численность и состав её экипажа.
 
-In the project directory, you can run:
 
-### `npm start`
+## Функциональные и нефункциональные требования:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* приложение должно получать и отображать широту и долготу, на которой в данный момент находится МКС (для этого рекомендуется использовать API от OpenNotify - http://open-notify.org/Open-Notify-API/ISS-Location-Now);
+* место, соответствующее полученным координатам, должно отображаться маркером на карте (советуем использовать самый простой вариант: карты от Google - https://developers.google.com/maps/documentation/javascript/examples/marker-simple);
+* приложение должно получать и отображать численность и состав текущего экипажа МКС (для этого также подойдёт API от OpenNotify - http://open-notify.org/Open-Notify-API/People-In-Space; обратите внимание: API возвращает данные всех людей в космосе, в то время как вам надо отображать лишь находящихся на МКС);
+* приложение должно отображать текущее время в формате UTC;
+* все вышеперечисленные данные должны автоматически обновляться раз в 5 секунд.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## tasklink
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+https://docs.google.com/document/d/1NuRGyMioSAlFw3xjmYYsdlwmhzxvHKxxjS_tOILCeBs/edit
