@@ -8,13 +8,14 @@ import {
 } from "react-google-maps";
 
 import { googleMapLink } from "../../../api/index";
+import iss from "../../../img/iss.png";
 
 class IssCoord extends Component<any, any> {
   constructor(props: any) {
     super(props);
 
     this.state = {
-      issNowRedux: {}
+      issNowRedux: {},
     };
   }
 
@@ -27,21 +28,27 @@ class IssCoord extends Component<any, any> {
       };
 
       upd().then(() => {
+        const { latitude, longitude } = this.state.issNowRedux;
+
         this.CMap = withScriptjs(
           withGoogleMap((props: any) => (
             <GoogleMap
-              defaultZoom={8}
+              defaultZoom={5}
               defaultCenter={{
-                lat: parseFloat(this.state.issNowRedux.latitude),
-                lng: parseFloat(this.state.issNowRedux.longitude)
+                lat: parseFloat(latitude),
+                lng: parseFloat(longitude)
               }}
             >
               <Marker
                 position={{
-                  lat: parseFloat(this.state.issNowRedux.latitude),
-                  lng: parseFloat(this.state.issNowRedux.longitude)
+                  lat: parseFloat(latitude),
+                  lng: parseFloat(longitude)
                 }}
-                title="wda"
+                icon={{
+                  url: iss,
+                  scaledSize: new google.maps.Size(100, 100)
+                }}
+                title={`ISS`}
               />
             </GoogleMap>
           ))
@@ -53,7 +60,7 @@ class IssCoord extends Component<any, any> {
   CMap = withScriptjs(
     withGoogleMap((props: any) => (
       <GoogleMap
-        defaultZoom={8}
+        defaultZoom={5}
         defaultCenter={{
           lat: parseFloat(this.state.issNowRedux.latitude),
           lng: parseFloat(this.state.issNowRedux.longitude)
@@ -64,7 +71,11 @@ class IssCoord extends Component<any, any> {
             lat: parseFloat(this.state.issNowRedux.latitude),
             lng: parseFloat(this.state.issNowRedux.longitude)
           }}
-          title="wda"
+          icon={{
+            url: iss,
+            scaledSize: new google.maps.Size(100, 100)
+          }}
+          title={`ISS`}
         />
       </GoogleMap>
     ))

@@ -8,7 +8,7 @@ import "./app.scss";
 
 export default function App() {
   return (
-    <BrowserRouter basename="iss">
+    <BrowserRouter>
       <div className="app">
         <Router />
       </div>

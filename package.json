@@ -28,7 +28,7 @@
     "redux-thunk": "^2.3.0",
     "typescript": "3.6.4"
   },
-  "homepage": "http://phillbot.github.io/iss",
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
