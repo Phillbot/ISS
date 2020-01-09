@@ -42,7 +42,7 @@ class Home extends Component<any, any> {
         getIssDataToDispatch(this.state.issNow);
         getPeopleDataToDispatch(this.state.issPeople);
       });
-    }, 5000);
+    }, 1000);
   }
 
   render() {
@@ -74,7 +74,7 @@ class Home extends Component<any, any> {
             <Timer />
 
             {!issPeopleIsLoaded ? (
-              <p>Загрузка людишек</p>
+              <p>Загрузка космонавтов</p>
             ) : !issPeopleError ? (
               <People />
             ) : (

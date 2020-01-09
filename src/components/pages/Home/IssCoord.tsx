@@ -15,44 +15,14 @@ class IssCoord extends Component<any, any> {
     super(props);
 
     this.state = {
-      issNowRedux: {},
+      issNowRedux: {}
     };
   }
 
   UNSAFE_componentWillReceiveProps(nextProps: any) {
     if (this.props !== nextProps) {
-      const upd = async () => {
-        this.setState({
-          issNowRedux: nextProps.issNowRedux.iss_position
-        });
-      };
-
-      upd().then(() => {
-        const { latitude, longitude } = this.state.issNowRedux;
-
-        this.CMap = withScriptjs(
-          withGoogleMap((props: any) => (
-            <GoogleMap
-              defaultZoom={5}
-              defaultCenter={{
-                lat: parseFloat(latitude),
-                lng: parseFloat(longitude)
-              }}
-            >
-              <Marker
-                position={{
-                  lat: parseFloat(latitude),
-                  lng: parseFloat(longitude)
-                }}
-                icon={{
-                  url: iss,
-                  scaledSize: new google.maps.Size(100, 100)
-                }}
-                title={`ISS`}
-              />
-            </GoogleMap>
-          ))
-        );
+      this.setState({
+        issNowRedux: nextProps.issNowRedux.iss_position
       });
     }
   }
@@ -60,10 +30,10 @@ class IssCoord extends Component<any, any> {
   CMap = withScriptjs(
     withGoogleMap((props: any) => (
       <GoogleMap
-        defaultZoom={5}
+        defaultZoom={1.1}
         defaultCenter={{
-          lat: parseFloat(this.state.issNowRedux.latitude),
-          lng: parseFloat(this.state.issNowRedux.longitude)
+          lat: 16.24,
+          lng: 16.24
         }}
       >
         <Marker
@@ -73,9 +43,9 @@ class IssCoord extends Component<any, any> {
           }}
           icon={{
             url: iss,
-            scaledSize: new google.maps.Size(100, 100)
+            scaledSize: new google.maps.Size(48, 48)
           }}
-          title={`ISS`}
+          title={`ISS now: latitude:${this.state.issNowRedux.latitude}, longitude:${this.state.issNowRedux.longitude}`}
         />
       </GoogleMap>
     ))
